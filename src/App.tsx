@@ -72,7 +72,12 @@ function App() {
   const scrollToForm = () => {
     const formElement = document.getElementById('waitlist-form')
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' })
+      const headerHeight = 88 // Fixed header height (h-16 + padding)
+      const elementPosition = formElement.offsetTop - headerHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
     }
   }
   return (

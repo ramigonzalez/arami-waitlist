@@ -167,3 +167,27 @@
 - Fixed header ensures consistent brand presence
 - Smooth scroll enhances user experience and accessibility
 - All existing functionality preserved and enhanced
+
+## [1.2.1] - Header Overlap Fix
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Fixed
+- **Header Overlap Issue**
+  - Fixed header overlapping form section when scrolling from hero CTA
+  - Updated scroll behavior to account for fixed header height (88px)
+  - Replaced `scrollIntoView` with `window.scrollTo` for precise positioning
+  - Improved user experience with proper scroll offset calculation
+
+### Technical Details
+- **Scroll Offset**: Added 88px offset to account for header height and padding
+- **Smooth Scrolling**: Maintained smooth scroll behavior with precise positioning
+- **Cross-browser Compatibility**: Used standard `window.scrollTo` API
+
+### Files Modified
+- `src/App.tsx` - Updated scrollToForm function with proper offset calculation
+
+### Notes
+- Form section now displays properly below fixed header
+- Smooth scroll animation preserved with accurate positioning
+- No visual overlap between header and form content

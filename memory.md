@@ -1,7 +1,7 @@
 # Current Task Memory Bank
 
 ## Current Phase: Phase 1.7 - Hero Section Enhancements
-**Status**: ✅ Completed
+**Status**: ✅ Completed (with Header Overlap Fix)
 
 ## Last Completed Tasks
 1. **Project Documentation Setup** - Created all required documentation files
@@ -13,18 +13,19 @@
 7. **Earlybird System** - Implemented early bird functionality with ranking
 8. **Visual Refinements (Colours v2.0)** - Updated color palette and integrated Arami logo
 9. **Hero Section Enhancements** - Added prominent CTA and improved logo visibility
+10. **Header Overlap Fix** - Fixed header overlapping form section during scroll navigation
 
 ## Current State
 - Application is fully functional with enhanced brand identity
 - Hero section now includes prominent "Join the Waitlist" CTA for immediate action
 - Fixed header with enhanced logo visibility and backdrop blur effects
-- Smooth scroll functionality for seamless navigation to form section
 - New color palette inspired by Arami logo (deep purples with accent colors)
 - Official Arami logo integrated in header for brand recognition
 - Ready for Supabase connection setup by user
 - All copy, design elements, and branding are in place
 - Custom pulse animation working as specified
 - Responsive design tested for all breakpoints
+- Header overlap issue resolved with proper scroll offset calculation
 
 ## Next Steps
 - User needs to connect to Supabase using the "Connect to Supabase" button
@@ -40,6 +41,7 @@
 - Referral system with early bird functionality
 - Official Arami logo integration
 - Smooth scroll navigation with native scrollIntoView API
+- Precise scroll positioning with window.scrollTo and header offset calculation
 - Fixed header with backdrop blur for enhanced visibility
 
 ## Known Dependencies
