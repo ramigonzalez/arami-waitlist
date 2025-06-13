@@ -68,3 +68,45 @@
 - All Phase 1 requirements implemented as specified
 - Custom animations working with Tailwind @keyframes
 - Responsive design tested across breakpoints
+
+## [1.1.0] - Visual Refinements (Colours v2.0)
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Added
+- **Brand Identity Integration**
+  - Official Arami logo integration in header
+  - Responsive logo positioning with proper spacing
+  - Enhanced brand recognition and visual consistency
+
+### Changed
+- **Color Palette (Colours v2.0)**
+  - Updated `bg-01` from `#0D0D0D` to `#201C2E` (deep purple)
+  - Updated `bg-02` from `#1A1A1E` to `#2F2B40` (Arami brand purple)
+  - Updated `accent-lilac` from `#BB9CF6` to `#8B7EE6` (logo-inspired purple)
+  - Retained `accent-moss` `#5CC6A4` for contrast and functional use
+  - Updated `gradient-pulse` to use new accent-lilac value
+
+- **Visual Design Improvements**
+  - Enhanced brand consistency across all components
+  - Improved color harmony inspired by official Arami logo
+  - Better visual hierarchy with refined purple tones
+  - Maintained accessibility and contrast ratios
+
+### Technical Details
+- **Files Modified**
+  - `tailwind.config.js` - Updated color tokens and gradient
+  - `src/App.tsx` - Added header with logo integration
+  - Documentation files updated to reflect changes
+
+### Design Philosophy
+- Aligned visual identity with official Arami branding
+- Maintained existing functionality while enhancing aesthetics
+- Preserved responsive design and accessibility standards
+- Created cohesive brand experience from logo to color palette
+
+### Notes
+- Logo automatically scales responsively across all device sizes
+- New color scheme maintains excellent contrast ratios
+- All existing animations and interactions preserved
+- Brand consistency now established for future development

@@ -30,6 +30,12 @@
 - [x] Custom event pushes to dataLayer
 - [x] Tier selection tracking
 
+### Task 1.6: Visual Refinements (Colours v2.0)
+- [x] Updated color palette to match Arami brand identity
+- [x] Integrated official Arami logo in header
+- [x] Refined gradient and accent colors
+- [x] Enhanced brand consistency across components
+
 ## Phase 2: Enhancements (Future)
 ### Task 2.1: Additional Features
 - [ ] Early-bird countdown banner component

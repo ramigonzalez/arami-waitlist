@@ -29,6 +29,8 @@ function App() {
     setError('')
     setIsLoading(true)
 
+    const searchParams = new URLSearchParams(window.location.search)
+
     try {
       const subscriberData: WaitlistSubscriber = {
         email: email.trim().toLowerCase(),
