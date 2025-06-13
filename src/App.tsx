@@ -114,33 +114,6 @@ function App() {
               Get early access • No spam, ever
             </p>
           </div>
-          
-          {/* Video Section */}
-          {/* <div className="mb-6">
-            <div className="max-w-xl mx-auto">
-              <div className="relative bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/20 rounded-md overflow-hidden shadow-2xl">
-                {/* Video Container with 16:9 Aspect Ratio 
-                <div className="relative w-full pb-[56.25%] h-0">
-                  {/* Replace this iframe src with your actual video embed URL 
-                  <iframe
-                    className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&showinfo=0"
-                    title="Arami App Demo"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                {/* Video Caption 
-                <div className="p-4 bg-bg-02/80 backdrop-blur-sm">
-                  <p className="text-text-muted text-sm text-center">
-                    See how Arami transforms your daily voice ritual into meaningful self-discovery
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* Value Propositions */}
           <div className="grid md:grid-cols-3 gap-6 mt-16 mb-16 max-w-3xl mx-auto">
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
               <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
