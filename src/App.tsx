@@ -234,7 +234,7 @@ function App() {
             {/* Price Badge */}
             <div className="mb-6 text-center">
               <div className="inline-block bg-gradient-pulse text-white px-4 py-2 rounded-pill text-sm font-medium">
-                Full avatar ≈ $5 /mo
+                Full avatar ≈ $25 /mo
               </div>
               <p className="text-xs text-text-muted mt-2">
                 *introductory pricing, subject to change
