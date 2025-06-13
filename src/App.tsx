@@ -259,7 +259,7 @@ function App() {
       </section>
 
       {/* Social Proof Section */}
-      <section className="social-proof py-12 px-4 text-center">
+      <section className="social-proof py-6 px-4 text-center">
         <p className="text-text-muted">
           Trusted by <span className="text-accent-moss font-semibold">2k creatives</span> during private beta.
         </p>
