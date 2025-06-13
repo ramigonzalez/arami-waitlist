@@ -244,3 +244,42 @@
 - Cleaner, more focused user experience
 - Simplified codebase without fixed header complexity
 - All existing functionality preserved
+
+## [1.3.1] - Price Badge Positioning Enhancement
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Changed
+- **Premium Tier Price Display**
+  - Moved price badge from separate section to inline with Premium option
+  - Positioned price badge to the right side of "Full Avatar (Premium)" label
+  - Updated price from "$5 /mo" to "Aprox ≈ $25 /mo" for accuracy
+  - Improved visual hierarchy and user experience
+
+- **Form Layout Optimization**
+  - Enhanced radio button layout with flexbox for better alignment
+  - Price badge now appears contextually with premium option
+  - Maintained responsive design across all breakpoints
+  - Preserved pricing disclaimer below tier selection
+
+### User Experience Improvements
+- **Contextual Pricing**: Price information appears directly with relevant option
+- **Cleaner Layout**: Eliminated separate price badge section for streamlined design
+- **Better Information Architecture**: Price and tier selection now logically grouped
+- **Improved Readability**: Clear visual association between premium tier and pricing
+
+### Technical Details
+- **Flexbox Layout**: Used `flex-1` and `ml-3` for optimal spacing and alignment
+- **Responsive Design**: Price badge scales appropriately across all device sizes
+- **Consistent Styling**: Maintained gradient background and pill shape design
+- **Accessibility**: Preserved semantic structure and screen reader compatibility
+
+### Files Modified
+- `src/App.tsx` - Updated premium tier radio button layout with inline price badge
+- `changelog.md` - Added entry for price badge positioning enhancement
+
+### Notes
+- Price information now appears more naturally in user flow
+- Enhanced visual clarity without compromising functionality
+- Maintained all existing form validation and submission logic
+- Improved overall form aesthetics and usability

@@ -1,6 +1,6 @@
 # Current Task Memory Bank
 
-## Current Phase: Phase 1.8 - Header Removal and Logo Integration
+## Current Phase: Phase 1.9 - Price Badge Positioning Enhancement
 **Status**: ✅ Completed
 
 ## Last Completed Tasks
@@ -15,6 +15,7 @@
 9. **Hero Section Enhancements** - Added prominent CTA and improved logo visibility
 10. **Header Overlap Fix** - Fixed header overlapping form section during scroll navigation
 11. **Header Removal and Logo Integration** - Removed fixed header and integrated logo into hero section
+12. **Price Badge Positioning Enhancement** - Moved price badge inline with Premium tier option for better UX
 
 ## Current State
 - Application is fully functional with enhanced brand identity
@@ -24,6 +25,8 @@
 - Official Arami logo integrated at top of hero section for brand recognition
 - Ready for Supabase connection setup by user
 - All copy, design elements, and branding are in place
+- Price badge now positioned contextually with Premium tier option
+- Updated pricing to "Aprox ≈ $25 /mo" for accuracy
 - Custom pulse animation working as specified
 - Responsive design tested for all breakpoints
 - Simplified scroll behavior without header offset complications
