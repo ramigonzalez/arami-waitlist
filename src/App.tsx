@@ -88,7 +88,7 @@ function App() {
           <img 
             src="/arami-logo.png" 
             alt="Arami Logo" 
-            className="h-16 mx-auto mb-12 drop-shadow-lg"
+            className="h-16 mx-auto mb-12 drop-shadow-lg max-w-3xl"
           />
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mt-16 mb-12 leading-tight">
