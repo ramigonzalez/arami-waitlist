@@ -233,9 +233,6 @@ function App() {
                     <div className="inline-block bg-gradient-pulse text-white px-4 py-2 rounded-pill text-sm font-medium">
                       ≈ $25 /mo
                     </div>
-                    <p className="text-xs text-text-muted mt-2">
-                      *introductory pricing, subject to change
-                    </p>
                   </div>
                 </label>
               </div>
