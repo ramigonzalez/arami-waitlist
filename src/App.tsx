@@ -95,6 +95,19 @@ function App() {
             Daily three-minute voice ritual guided by an empathic AI avatar.
           </p>
 
+                  {/* Hero CTA Button */}
+          <div className="mb-16">
+            <button
+              onClick={scrollToForm}
+              className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-300 shadow-2xl hover:shadow-accent-lilac/25"
+            >
+              Join the Waitlist
+            </button>
+            <p className="text-text-muted text-sm mt-3">
+              Get early access • No spam, ever
+            </p>
+          </div>
+          
           {/* Video Section */}
           <div className="mb-12">
             <div className="max-w-3xl mx-auto">
@@ -119,19 +132,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Hero CTA Button */}
-          <div className="mb-16">
-            <button
-              onClick={scrollToForm}
-              className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-300 shadow-2xl hover:shadow-accent-lilac/25"
-            >
-              Join the Waitlist
-            </button>
-            <p className="text-text-muted text-sm mt-3">
-              Get early access • No spam, ever
-            </p>
           </div>
           {/* Value Propositions */}
           <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
