@@ -91,7 +91,7 @@ function App() {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-text-muted mb-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-text-muted mb-8 max-w-2xl mx-auto leading-relaxed">
             Daily three-minute voice ritual guided by an empathic AI avatar.
           </p>
 
