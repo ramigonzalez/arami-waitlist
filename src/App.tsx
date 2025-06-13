@@ -95,7 +95,7 @@ function App() {
             Daily three-minute voice ritual guided by an empathic AI avatar.
           </p>
 
-                  {/* Hero CTA Button */}
+          {/* Hero CTA Button */}
           <div className="mb-16">
             <button
               onClick={scrollToForm}
