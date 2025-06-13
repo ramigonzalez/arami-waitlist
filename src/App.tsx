@@ -134,7 +134,7 @@ function App() {
             </div>
           </div> */}
           {/* Value Propositions */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 mt-16 mb-16 max-w-3xl mx-auto">
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
               <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Users className="w-6 h-6 text-accent-lilac" />
