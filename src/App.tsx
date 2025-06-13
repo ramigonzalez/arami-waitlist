@@ -154,7 +154,7 @@ function App() {
       </section>
 
       {/* Form Section */}
-      <section id="waitlist-form" className="form pb-16 px-4">
+      <section id="waitlist-form" className="form pb-16 px-4 pt-24">
         <div className="max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="bg-bg-02/80 backdrop-blur-sm border border-accent-lilac/20 rounded-md p-8 shadow-2xl">
             <div className="mb-6">
