@@ -228,7 +228,7 @@ function App() {
                     <span className="text-accent-lilac ml-2">(Premium)</span>
                   </span>
                   <div className="ml-3 bg-gradient-pulse text-white px-3 py-1 rounded-pill text-xs font-medium">
-                    ≈ $5 /mo
+                    Aprox ≈ $25 /mo
                   </div>
                 </label>
               </div>
