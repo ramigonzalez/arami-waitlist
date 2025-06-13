@@ -110,7 +110,7 @@ function App() {
           
           {/* Video Section */}
           <div className="mb-6">
-            <div className="max-w-xl mx-auto">
+            <div className="max-w-l mx-auto">
               <div className="relative bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/20 rounded-md overflow-hidden shadow-2xl">
                 {/* Video Container with 16:9 Aspect Ratio */}
                 <div className="relative w-full pb-[56.25%] h-0">
