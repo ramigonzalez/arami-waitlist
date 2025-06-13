@@ -227,19 +227,26 @@ function App() {
                     <span className="font-medium">Full Avatar</span>
                     <span className="text-accent-lilac ml-2">(Premium)</span>
                   </span>
+                  
+                  {/* Price Badge */}
+                  <div className="mb-6 text-center">
+                    <div className="inline-block bg-gradient-pulse text-white px-4 py-2 rounded-pill text-sm font-medium">
+                      ≈ $25 /mo
+                    </div>
+                    <p className="text-xs text-text-muted mt-2">
+                      *introductory pricing, subject to change
+                    </p>
+                  </div>
                 </label>
               </div>
             </div>
-
-            {/* Price Badge */}
-            <div className="mb-6 text-center">
-              <div className="inline-block bg-gradient-pulse text-white px-4 py-2 rounded-pill text-sm font-medium">
-                Full avatar ≈ $25 /mo
-              </div>
-              <p className="text-xs text-text-muted mt-2">
-                *introductory pricing, subject to change
-              </p>
-            </div>
+             {/* Price Badge */}
+                  <div className="mb-6 text-center">
+                  
+                    <p className="text-xs text-text-muted mt-2">
+                      *introductory pricing, subject to change
+                    </p>
+                  </div>
 
             {error && (
               <div className="mb-6 p-3 bg-red-500/10 border border-red-500/30 rounded-md text-red-400 text-sm">
