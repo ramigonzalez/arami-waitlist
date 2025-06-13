@@ -223,20 +223,20 @@ function App() {
                     onChange={(e) => handleTierChange(e.target.value)}
                     className="text-accent-lilac focus:ring-accent-lilac/20"
                   />
-                  <span className="ml-3 text-text-primary">
+                  <span className="ml-3 text-text-primary flex-1">
                     <span className="font-medium">Full Avatar</span>
                     <span className="text-accent-lilac ml-2">(Premium)</span>
                   </span>
+                  <div className="ml-3 bg-gradient-pulse text-white px-3 py-1 rounded-pill text-xs font-medium">
+                    ≈ $5 /mo
+                  </div>
                 </label>
               </div>
             </div>
 
-            {/* Price Badge */}
+            {/* Pricing Disclaimer */}
             <div className="mb-6 text-center">
-              <div className="inline-block bg-gradient-pulse text-white px-4 py-2 rounded-pill text-sm font-medium">
-                Full avatar ≈ $5 /mo
-              </div>
-              <p className="text-xs text-text-muted mt-2">
+              <p className="text-xs text-text-muted">
                 *introductory pricing, subject to change
               </p>
             </div>
