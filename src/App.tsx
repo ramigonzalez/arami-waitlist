@@ -69,21 +69,29 @@ function App() {
     }
   }
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById('waitlist-form')
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
       {/* Header with Logo */}
-      <header className="absolute top-0 left-0 right-0 z-10 p-6">
-        <div className="max-w-7xl mx-auto">
-          <img 
-            src="/arami-logo.png" 
-            alt="Arami" 
-            className="h-12 w-auto"
-          />
+      <header className="fixed top-0 left-0 right-0 z-50 bg-bg-01/80 backdrop-blur-md border-b border-accent-lilac/10">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center">
+            <img 
+              src="/arami-logo.png" 
+              alt="Arami" 
+              className="h-16 w-auto drop-shadow-lg"
+            />
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="hero min-h-screen flex items-center justify-center px-4 py-12 pt-24">
+      <section className="hero min-h-screen flex items-center justify-center px-4 py-12 pt-32">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
             Speak your mind.<br />
@@ -96,6 +104,18 @@ function App() {
             Daily three-minute voice ritual guided by an empathic AI avatar.
           </p>
 
+          {/* Hero CTA Button */}
+          <div className="mb-16">
+            <button
+              onClick={scrollToForm}
+              className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-300 shadow-2xl hover:shadow-accent-lilac/25"
+            >
+              Join the Waitlist
+            </button>
+            <p className="text-text-muted text-sm mt-3">
+              Get early access • No spam, ever
+            </p>
+          </div>
           {/* Value Propositions */}
           <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
@@ -129,7 +149,7 @@ function App() {
       </section>
 
       {/* Form Section */}
-      <section className="form pb-16 px-4">
+      <section id="waitlist-form" className="form pb-16 px-4">
         <div className="max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="bg-bg-02/80 backdrop-blur-sm border border-accent-lilac/20 rounded-md p-8 shadow-2xl">
             <div className="mb-6">

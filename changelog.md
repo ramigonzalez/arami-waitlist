@@ -110,3 +110,60 @@
 - New color scheme maintains excellent contrast ratios
 - All existing animations and interactions preserved
 - Brand consistency now established for future development
+
+## [1.2.0] - Hero Section Enhancements
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Added
+- **Hero Section Call-to-Action**
+  - Primary "Join the Waitlist" button prominently displayed in hero section
+  - Smooth scroll functionality to form section when clicked
+  - Supporting text with value proposition ("Get early access • No spam, ever")
+  - Enhanced button styling with shadow effects and hover animations
+
+- **Improved Logo Visibility**
+  - Fixed header with enhanced backdrop blur and border
+  - Increased logo size from h-12 to h-16 for better visibility
+  - Added drop shadow effect to logo for better contrast
+  - Sticky header ensures brand visibility throughout page scroll
+
+### Changed
+- **Header Design**
+  - Changed from absolute to fixed positioning for persistent visibility
+  - Added semi-transparent background with backdrop blur effect
+  - Enhanced padding and spacing for better visual hierarchy
+  - Added subtle border for definition against hero background
+
+- **Hero Section Layout**
+  - Added prominent CTA button above value propositions
+  - Adjusted padding-top to accommodate fixed header
+  - Improved visual flow from headline to action
+  - Enhanced user engagement with immediate call-to-action
+
+- **Form Section**
+  - Added unique ID for smooth scroll targeting
+  - Maintained existing functionality and styling
+  - Improved accessibility with proper scroll behavior
+
+### Technical Details
+- **Smooth Scrolling**: Implemented native `scrollIntoView` with smooth behavior
+- **Fixed Header**: Enhanced with backdrop blur and transparency effects
+- **Responsive Design**: All enhancements maintain mobile-first approach
+- **Performance**: No additional dependencies required
+
+### User Experience Improvements
+- **Immediate Action**: Users can join waitlist without scrolling
+- **Brand Recognition**: Logo remains visible throughout interaction
+- **Clear Navigation**: Smooth scroll provides seamless user flow
+- **Visual Hierarchy**: Enhanced prominence of primary action
+
+### Files Modified
+- `src/App.tsx` - Added hero CTA, improved header, smooth scroll functionality
+- `changelog.md` - Updated with enhancement details
+
+### Notes
+- Hero CTA reduces friction for immediate user engagement
+- Fixed header ensures consistent brand presence
+- Smooth scroll enhances user experience and accessibility
+- All existing functionality preserved and enhanced
