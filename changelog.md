@@ -191,3 +191,56 @@
 - Form section now displays properly below fixed header
 - Smooth scroll animation preserved with accurate positioning
 - No visual overlap between header and form content
+
+## [1.3.0] - Header Removal and Logo Integration
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Removed
+- **Fixed Header**
+  - Removed fixed header bar that was overlaying content
+  - Eliminated potential visual clutter and navigation complexity
+  - Simplified page structure for cleaner user experience
+
+### Changed
+- **Logo Placement**
+  - Moved Arami logo from fixed header to top of hero section
+  - Logo now scrolls naturally with page content
+  - Centered logo positioning with proper spacing (py-8 px-4)
+  - Maintained logo size (h-16) and drop shadow effects
+
+- **Hero Section Layout**
+  - Changed from `flex items-center justify-center` to `flex flex-col justify-center`
+  - Added dedicated logo container at top of hero section
+  - Removed `pt-32` padding that was compensating for fixed header
+  - Improved vertical flow from logo to headline to content
+
+- **Scroll Behavior**
+  - Simplified scroll function by removing header height offset
+  - Cleaner scroll-to-form functionality without header overlap concerns
+  - Maintained smooth scrolling behavior
+
+- **Form Section**
+  - Removed `pt-24` padding that was compensating for fixed header
+  - Form now displays naturally without header spacing considerations
+
+### User Experience Improvements
+- **Cleaner Design**: Eliminated visual complexity of fixed header
+- **Natural Flow**: Logo and content scroll together for cohesive experience
+- **Simplified Navigation**: Removed potential confusion from overlapping elements
+- **Mobile Optimization**: Better mobile experience without fixed header space constraints
+
+### Technical Details
+- **Layout Structure**: Simplified CSS layout without fixed positioning
+- **Scroll Mechanics**: Streamlined scroll behavior without offset calculations
+- **Responsive Design**: Maintained responsive logo and layout across all breakpoints
+
+### Files Modified
+- `src/App.tsx` - Removed header, integrated logo into hero, simplified scroll function
+- `changelog.md` - Updated with removal and integration details
+
+### Notes
+- Logo maintains strong brand presence at top of page
+- Cleaner, more focused user experience
+- Simplified codebase without fixed header complexity
+- All existing functionality preserved

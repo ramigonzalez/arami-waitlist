@@ -72,8 +72,7 @@ function App() {
   const scrollToForm = () => {
     const formElement = document.getElementById('waitlist-form')
     if (formElement) {
-      const headerHeight = 88 // Fixed header height (h-16 + padding)
-      const elementPosition = formElement.offsetTop - headerHeight
+      const elementPosition = formElement.offsetTop
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
@@ -82,21 +81,17 @@ function App() {
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
-      {/* Header with Logo */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-bg-01/80 backdrop-blur-md border-b border-accent-lilac/10">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center">
-            <img 
-              src="/arami-logo.png" 
-              alt="Arami" 
-              className="h-16 w-auto drop-shadow-lg"
-            />
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="hero min-h-screen flex items-center justify-center px-4 py-12 pt-32">
+      <section className="hero min-h-screen flex flex-col justify-center px-4 py-12">
+        {/* Logo at top of hero */}
+        <div className="py-8 px-4 text-center">
+          <img 
+            src="/arami-logo.png" 
+            alt="Arami" 
+            className="h-16 w-auto mx-auto drop-shadow-lg"
+          />
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
             Speak your mind.<br />
@@ -180,7 +175,7 @@ function App() {
       </section>
 
       {/* Form Section */}
-      <section id="waitlist-form" className="form pb-16 px-4 pt-24">
+      <section id="waitlist-form" className="form pb-16 px-4">
         <div className="max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="bg-bg-02/80 backdrop-blur-sm border border-accent-lilac/20 rounded-md p-8 shadow-2xl">
             <div className="mb-6">
