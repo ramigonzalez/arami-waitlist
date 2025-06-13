@@ -99,7 +99,7 @@ function App() {
           <div className="mb-16">
             <button
               onClick={scrollToForm}
-              className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-300 shadow-2xl hover:shadow-accent-lilac/25"
+              className="btn-primary bg-gradient-pulse text-white py-2 px-2 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-300 shadow-2xl hover:shadow-accent-lilac/25"
             >
               Join the Waitlist
             </button>
