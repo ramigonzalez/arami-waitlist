@@ -82,8 +82,17 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
       {/* Hero Section */}
-      <section className="hero min-h-screen flex flex-col justify-center px-4 py-12">        
+      <section className="hero flex flex-col justify-center px-4 py-6">        
         <div className="max-w-4xl mx-auto text-center">
+          {/* Arami Logo */}
+          <div className="py-4 px-4 text-center">
+            <img 
+              src="/arami-logo.png" 
+              alt="Arami" 
+              className="h-12 mx-auto drop-shadow-lg"
+            />
+          </div>
+          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
             Speak your mind.<br />
             <span className="bg-gradient-pulse bg-clip-text text-transparent">
@@ -91,12 +100,12 @@ function App() {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-text-muted mb-6 max-w-2xl mx-auto leading-relaxed">
             Daily three-minute voice ritual guided by an empathic AI avatar.
           </p>
 
           {/* Hero CTA Button */}
-          <div className="mb-8">
+          <div className="mb-4">
             <button
               onClick={scrollToForm}
               className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-300 shadow-2xl hover:shadow-accent-lilac/25"
@@ -109,7 +118,7 @@ function App() {
           </div>
           
           {/* Video Section */}
-          <div className="mb-12">
+          <div className="mb-6">
             <div className="max-w-3xl mx-auto">
               <div className="relative bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/20 rounded-md overflow-hidden shadow-2xl">
                 {/* Video Container with 16:9 Aspect Ratio */}
@@ -134,7 +143,7 @@ function App() {
             </div>
           </div>
           {/* Value Propositions */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-3xl mx-auto">
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
               <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Users className="w-6 h-6 text-accent-lilac" />
