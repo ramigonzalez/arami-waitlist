@@ -96,7 +96,7 @@ function App() {
           </p>
 
           {/* Hero CTA Button */}
-          <div className="mb-8">
+          <div className="mt-8 mb-8">
             <button
               onClick={scrollToForm}
               className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-600 shadow-2xl hover:shadow-accent-lilac/25"
