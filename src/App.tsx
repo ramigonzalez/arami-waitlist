@@ -84,7 +84,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero flex flex-col justify-center px-4 py-6">        
         <div className="max-w-4xl mx-auto text-center">          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-12 leading-tight">
             Speak your mind.<br />
             <span className="bg-gradient-pulse bg-clip-text text-transparent">
               Discover your truth.
@@ -96,7 +96,7 @@ function App() {
           </p>
 
           {/* Hero CTA Button */}
-          <div className="mb-6">
+          <div className="mb-8">
             <button
               onClick={scrollToForm}
               className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-600 shadow-2xl hover:shadow-accent-lilac/25"
@@ -134,7 +134,7 @@ function App() {
             </div>
           </div> */}
           {/* Value Propositions */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
               <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Users className="w-6 h-6 text-accent-lilac" />
