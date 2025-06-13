@@ -82,16 +82,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
       {/* Hero Section */}
-      <section className="hero min-h-screen flex flex-col justify-center px-4 py-12">
-        {/* Logo at top of hero */}
-        <div className="py-8 px-4 text-center">
-          <img 
-            src="/arami-logo.png" 
-            alt="Arami" 
-            className="h-16 w-auto mx-auto drop-shadow-lg"
-          />
-        </div>
-        
+      <section className="hero min-h-screen flex flex-col justify-center px-4 py-12">        
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
             Speak your mind.<br />
