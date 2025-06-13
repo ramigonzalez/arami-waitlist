@@ -84,6 +84,13 @@ function App() {
       {/* Hero Section */}
       <section className="hero flex flex-col justify-center px-4 py-6">        
         <div className="max-w-4xl mx-auto text-center">          
+          {/* Arami Logo */}
+          <img 
+            src="/arami-logo.png" 
+            alt="Arami Logo" 
+            className="h-16 mx-auto mb-12 drop-shadow-lg"
+          />
+          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mt-16 mb-12 leading-tight">
             Speak your mind.<br />
             <span className="bg-gradient-pulse bg-clip-text text-transparent">
