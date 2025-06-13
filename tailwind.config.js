@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bg-01': '#0D0D0D',
-        'bg-02': '#1A1A1E',
-        'accent-lilac': '#BB9CF6',
+        'bg-01': '#201C2E',
+        'bg-02': '#2F2B40',
+        'accent-lilac': '#8B7EE6',
         'accent-moss': '#5CC6A4',
         'text-primary': '#F5F5F5',
         'text-muted': '#C5C5C7'
       },
       backgroundImage: {
-        'gradient-pulse': 'linear-gradient(135deg, #BB9CF6 0%, #5CC6A4 100%)'
+        'gradient-pulse': 'linear-gradient(135deg, #8B7EE6 0%, #5CC6A4 100%)'
       },
       fontFamily: {
         'display': ['DM Sans', 'sans-serif'],

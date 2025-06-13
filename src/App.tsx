@@ -69,8 +69,19 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
+      {/* Header with Logo */}
+      <header className="absolute top-0 left-0 right-0 z-10 p-6">
+        <div className="max-w-7xl mx-auto">
+          <img 
+            src="/arami-logo.png" 
+            alt="Arami" 
+            className="h-12 w-auto"
+          />
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="hero min-h-screen flex items-center justify-center px-4 py-12">
+      <section className="hero min-h-screen flex items-center justify-center px-4 py-12 pt-24">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-6 leading-tight">
             Speak your mind.<br />
