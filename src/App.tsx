@@ -84,7 +84,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero flex flex-col justify-center px-4 py-6">        
         <div className="max-w-4xl mx-auto text-center">          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-12 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mt-12 mb-12 leading-tight">
             Speak your mind.<br />
             <span className="bg-gradient-pulse bg-clip-text text-transparent">
               Discover your truth.
