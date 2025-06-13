@@ -231,7 +231,7 @@ function App() {
                   {/* Price Badge */}
                   <div className="mb-6 text-center">
                     <div className="inline-block bg-gradient-pulse text-white px-4 py-2 rounded-pill text-sm font-medium">
-                      ≈ $25 /mo
+                      Aprox ≈ $25 /mo
                     </div>
                   </div>
                 </label>
