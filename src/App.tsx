@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { supabase, type WaitlistSubscriber } from './lib/supabase'
+import { supabase } from './lib/supabase'
 import { SuccessModal } from './components/SuccessModal'
 import { Mail, Shield, Users } from 'lucide-react'
 
@@ -30,32 +30,33 @@ function App() {
     setIsLoading(true)
 
     try {
-      const subscriberData: WaitlistSubscriber = {
-        email: email.trim().toLowerCase(),
-        tier,
-        ref_by: searchParams.get('ref') ?? null
+      const { data, error: functionError } = await supabase.functions.invoke('waitlist-signup', {
+        body: {
+          email: email.trim().toLowerCase(),
+          tier,
+          ref_by: searchParams.get('ref') ?? null
+        }
+      })
+      
+      if (functionError) {
+        setError(functionError.message)
+        return
       }
 
-      const { data, error: supabaseError } = await supabase
-        .from('waitlist_subscribers')
-        .insert([subscriberData])
-        .select('id, ref_code, created_at')
-        .single();  
-      
-      if (supabaseError) {
-        if (supabaseError.code === '23505') { // Unique constraint violation
-          setError("Looks like you're already on the list.")
-        } else {
-          setError('Something went wrong. Please try again.')
-        }
+      if (data.error) {
+        setError(data.error)
         return
-      } else {
-        setUserId(data?.id)
-        setRefCode(data?.ref_code)
       }
+
+      setUserId(data.id)
+      setRefCode(data.ref_code)
 
       // Track successful submission
-      trackEvent('join_waitlist', { tier })
+      trackEvent('join_waitlist', { 
+        tier,
+        early_bird: data.early_bird,
+        position: data.position
+      })
       
       setShowSuccess(true)
       setEmail('')
