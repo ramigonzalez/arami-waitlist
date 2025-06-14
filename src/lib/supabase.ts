@@ -10,9 +10,12 @@ if (!supabaseUrl || !supabaseAnonKey) {
 export const supabase = createClient(supabaseUrl || '', supabaseAnonKey || '')
 
 export type WaitlistSubscriber = {
-  id?: string
+  id?: number
   email: string
   tier: string
   created_at?: string
   ref_by?: string
+  ref_code?: string
+  referrals_count?: number
+  early_bird?: boolean
 }
