@@ -8,6 +8,7 @@ function App() {
   const [userId, setUserId] = useState(0)
   const [refCode, setRefCode] = useState('')
   const [incomingRefCode, setIncomingRefCode] = useState<string | null>(null)
+  const [manualRefCode, setManualRefCode] = useState('')
   const [tier, setTier] = useState('free')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
@@ -45,7 +46,7 @@ function App() {
       const subscriberData: WaitlistSubscriber = {
         email: email.trim().toLowerCase(),
         tier,
-        ref_by: searchParams.get('ref') ?? null
+        ref_by: incomingRefCode || (manualRefCode.trim() || null)
       }
 
       const { data, error: supabaseError } = await supabase
@@ -71,6 +72,7 @@ function App() {
       
       setShowSuccess(true)
       setEmail('')
+      setManualRefCode('')
       setTier('free')
     } catch (err) {
       setError('Something went wrong. Please try again.')
@@ -273,6 +275,26 @@ function App() {
                 />
               </div>
             </div>
+
+            {/* Manual Referral Code Input - only show if no incoming ref code */}
+            {!incomingRefCode && (
+              <div className="mb-4">
+                <label htmlFor="refCode" className="block text-text-primary font-medium mb-2">
+                  Referral Code (Optional)
+                </label>
+                <div className="relative">
+                  <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-muted w-5 h-5" />
+                  <input
+                    type="text"
+                    id="refCode"
+                    value={manualRefCode}
+                    onChange={(e) => setManualRefCode(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-bg-01 border border-accent-lilac/30 rounded-pill text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-lilac focus:ring-2 focus:ring-accent-lilac/20 transition-colors"
+                    placeholder="Enter a friend's referral code"
+                  />
+                </div>
+              </div>
+            )}
 
             <div className="mb-6">
               <label className="block text-text-primary font-medium mb-3">
