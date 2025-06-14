@@ -215,7 +215,7 @@ function App() {
                   onClick={scrollToForm}
                   className="bg-gradient-pulse text-white py-3 px-6 rounded-pill font-display font-semibold hover:animate-pulse-btn transition-all duration-600 shadow-lg hover:shadow-accent-lilac/25"
                 >
-                  Get Early Access
+                  Join the Waitlist
                 </button>
               </div>
             </div>
