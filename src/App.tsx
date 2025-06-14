@@ -145,6 +145,84 @@ function App() {
         </div>
       </section>
 
+      {/* App Showcase Section */}
+      <section className="app-showcase py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left Column - Feature Information */}
+            <div className="flex-1 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-text-primary leading-tight">
+                Experience the Future of 
+                <span className="bg-gradient-pulse bg-clip-text text-transparent block">
+                  Self-Discovery
+                </span>
+              </h2>
+              
+              <p className="text-lg text-text-muted leading-relaxed">
+                Meet Imara, your empathic AI companion. Through natural conversation, 
+                she helps you process thoughts, explore emotions, and discover insights 
+                about yourself in a safe, judgment-free space.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent-lilac rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-text-primary font-semibold mb-1">Natural Voice Conversations</h3>
+                    <p className="text-text-muted text-sm">Speak naturally with Imara using advanced voice recognition and synthesis</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent-moss rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-text-primary font-semibold mb-1">Personalized AI Avatar</h3>
+                    <p className="text-text-muted text-sm">See and interact with your AI companion through lifelike expressions and gestures</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent-lilac rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-text-primary font-semibold mb-1">Emotional Intelligence</h3>
+                    <p className="text-text-muted text-sm">AI that understands context, tone, and emotional nuance in your conversations</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent-moss rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="text-text-primary font-semibold mb-1">Complete Privacy</h3>
+                    <p className="text-text-muted text-sm">Your conversations are encrypted and stored securely - delete anytime</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="pt-4">
+                <button
+                  onClick={scrollToForm}
+                  className="bg-gradient-pulse text-white py-3 px-6 rounded-pill font-display font-semibold hover:animate-pulse-btn transition-all duration-600 shadow-lg hover:shadow-accent-lilac/25"
+                >
+                  Get Early Access
+                </button>
+              </div>
+            </div>
+            
+            {/* Right Column - App Interface Image */}
+            <div className="flex-1 max-w-lg">
+              <div className="relative">
+                <img 
+                  src="/arami-app-1.png" 
+                  alt="Arami App Interface - Chat with Imara" 
+                  className="w-full h-auto rounded-2xl shadow-2xl border border-accent-lilac/20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg-01/20 to-transparent rounded-2xl pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Form Section */}
       <section id="waitlist-form" className="form pb-16 px-4 scroll-mt-20">
         <div className="max-w-md mx-auto">
