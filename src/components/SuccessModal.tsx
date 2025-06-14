@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { X, Twitter, Copy, Check } from 'lucide-react'
 
 interface SuccessModalProps {
