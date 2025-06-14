@@ -1,0 +1,40 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <h1 style="color: #8B7EE6; text-align: center;">Welcome to Arami! 🎉</h1>
+  
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    Thank you for joining our waitlist! We're excited to have you on board as we build something special.
+  </p>
+
+  <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <h2 style="color: #5CC6A4; margin-top: 0;">Your Waitlist Details:</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 10px;">🎯 Tier: {{ .Data.tier }}</li>
+      {{ if .Data.early_bird }}
+        <li style="margin-bottom: 10px;">🌟 Early Bird Status: Yes!</li>
+      {{ else }}
+        <li style="margin-bottom: 10px;">📊 Position: #{{ .Data.position }}</li>
+      {{ end }}
+      <li style="margin-bottom: 10px;">🔑 Your Referral Code: {{ .Data.ref_code }}</li>
+    </ul>
+  </div>
+
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    Share your referral code with friends to move up the waitlist! The more friends you invite, the higher your priority.
+  </p>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="https://talkwitharami.xyz/?ref={{ .Data.ref_code }}" 
+       style="background: linear-gradient(135deg, #8B7EE6 0%, #5CC6A4 100%); 
+              color: white; 
+              padding: 12px 24px; 
+              text-decoration: none; 
+              border-radius: 28px; 
+              font-weight: bold;">
+      Share Your Referral Link
+    </a>
+  </div>
+
+  <p style="color: #666; font-size: 14px; text-align: center; margin-top: 30px;">
+    We'll keep you updated on our progress. Stay tuned for exciting updates!
+  </p>
+</div>

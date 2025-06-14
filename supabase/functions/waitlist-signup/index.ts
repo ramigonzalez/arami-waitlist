@@ -5,6 +5,27 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.4'
 // Email validation regex
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
+// Function to send welcome email
+async function sendWelcomeEmail(subscriber: any) {
+  const supabaseClient = createClient(
+    Deno.env.get('SUPABASE_URL') ?? '',
+    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+  )
+
+  const { error } = await supabaseClient.auth.admin.inviteUserByEmail(subscriber.email, {
+    data: {
+      tier: subscriber.tier,
+      ref_code: subscriber.ref_code,
+      early_bird: subscriber.early_bird,
+      position: subscriber.position,
+    }
+  })
+
+  if (error) {
+    console.error('Error sending welcome email:', error)
+  }
+}
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -116,8 +137,8 @@ serve(async (req) => {
       }
     }
 
-    // 3. Send welcome email (you can implement this later)
-    // await sendWelcomeEmail(subscriber)
+    // 3. Send welcome email
+    await sendWelcomeEmail(subscriber)
 
     // 4. Track analytics
     console.log('New subscriber:', {
@@ -142,9 +163,18 @@ serve(async (req) => {
       }
     )
   } catch (error) {
-    console.error('Error processing request:', error)
+    console.error('Error processing request:', {
+      error,
+      message: error.message,
+      stack: error.stack,
+      name: error.name
+    })
     return new Response(
-      JSON.stringify({ error: 'Internal Server Error' }),
+      JSON.stringify({ 
+        error: 'Internal Server Error',
+        details: error.message,
+        type: error.name
+      }),
       { 
         status: 500, 
         headers: { 
