@@ -30,6 +30,34 @@
 - [x] Custom event pushes to dataLayer
 - [x] Tier selection tracking
 
+### Task 1.6: Visual Refinements (Colours v2.0)
+- [x] Updated color palette to match Arami brand identity
+- [x] Integrated official Arami logo in header
+- [x] Refined gradient and accent colors
+- [x] Enhanced brand consistency across components
+
+### Task 1.7: Hero Section Enhancements
+- [x] Added prominent "Join the Waitlist" CTA button in hero section
+- [x] Implemented smooth scroll functionality to form section
+- [x] Enhanced logo visibility with fixed header and backdrop blur
+- [x] Improved user engagement with immediate call-to-action
+- [x] Maintained responsive design across all enhancements
+- [x] Fixed header overlap issue with proper scroll offset calculation
+
+### Task 1.8: Header Removal and Logo Integration
+- [x] Removed fixed header to eliminate visual complexity
+- [x] Integrated Arami logo into top of hero section
+- [x] Simplified scroll behavior without header offset requirements
+- [x] Improved natural content flow and mobile experience
+- [x] Maintained brand presence and responsive design
+
+### Task 1.9: Price Badge Positioning Enhancement
+- [x] Moved price badge from separate section to inline with Premium tier option
+- [x] Updated pricing from "$5 /mo" to "Aprox ≈ $25 /mo" for accuracy
+- [x] Enhanced form layout with better visual hierarchy
+- [x] Improved contextual information display for premium pricing
+- [x] Maintained responsive design and accessibility standards
+
 ## Phase 2: Enhancements (Future)
 ### Task 2.1: Additional Features
 - [ ] Early-bird countdown banner component

@@ -68,3 +68,218 @@
 - All Phase 1 requirements implemented as specified
 - Custom animations working with Tailwind @keyframes
 - Responsive design tested across breakpoints
+
+## [1.1.0] - Visual Refinements (Colours v2.0)
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Added
+- **Brand Identity Integration**
+  - Official Arami logo integration in header
+  - Responsive logo positioning with proper spacing
+  - Enhanced brand recognition and visual consistency
+
+### Changed
+- **Color Palette (Colours v2.0)**
+  - Updated `bg-01` from `#0D0D0D` to `#201C2E` (deep purple)
+  - Updated `bg-02` from `#1A1A1E` to `#2F2B40` (Arami brand purple)
+  - Updated `accent-lilac` from `#BB9CF6` to `#8B7EE6` (logo-inspired purple)
+  - Retained `accent-moss` `#5CC6A4` for contrast and functional use
+  - Updated `gradient-pulse` to use new accent-lilac value
+
+- **Visual Design Improvements**
+  - Enhanced brand consistency across all components
+  - Improved color harmony inspired by official Arami logo
+  - Better visual hierarchy with refined purple tones
+  - Maintained accessibility and contrast ratios
+
+### Technical Details
+- **Files Modified**
+  - `tailwind.config.js` - Updated color tokens and gradient
+  - `src/App.tsx` - Added header with logo integration
+  - Documentation files updated to reflect changes
+
+### Design Philosophy
+- Aligned visual identity with official Arami branding
+- Maintained existing functionality while enhancing aesthetics
+- Preserved responsive design and accessibility standards
+- Created cohesive brand experience from logo to color palette
+
+### Notes
+- Logo automatically scales responsively across all device sizes
+- New color scheme maintains excellent contrast ratios
+- All existing animations and interactions preserved
+- Brand consistency now established for future development
+
+## [1.2.0] - Hero Section Enhancements
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Added
+- **Hero Section Call-to-Action**
+  - Primary "Join the Waitlist" button prominently displayed in hero section
+  - Smooth scroll functionality to form section when clicked
+  - Supporting text with value proposition ("Get early access • No spam, ever")
+  - Enhanced button styling with shadow effects and hover animations
+
+- **Improved Logo Visibility**
+  - Fixed header with enhanced backdrop blur and border
+  - Increased logo size from h-12 to h-16 for better visibility
+  - Added drop shadow effect to logo for better contrast
+  - Sticky header ensures brand visibility throughout page scroll
+
+### Changed
+- **Header Design**
+  - Changed from absolute to fixed positioning for persistent visibility
+  - Added semi-transparent background with backdrop blur effect
+  - Enhanced padding and spacing for better visual hierarchy
+  - Added subtle border for definition against hero background
+
+- **Hero Section Layout**
+  - Added prominent CTA button above value propositions
+  - Adjusted padding-top to accommodate fixed header
+  - Improved visual flow from headline to action
+  - Enhanced user engagement with immediate call-to-action
+
+- **Form Section**
+  - Added unique ID for smooth scroll targeting
+  - Maintained existing functionality and styling
+  - Improved accessibility with proper scroll behavior
+
+### Technical Details
+- **Smooth Scrolling**: Implemented native `scrollIntoView` with smooth behavior
+- **Fixed Header**: Enhanced with backdrop blur and transparency effects
+- **Responsive Design**: All enhancements maintain mobile-first approach
+- **Performance**: No additional dependencies required
+
+### User Experience Improvements
+- **Immediate Action**: Users can join waitlist without scrolling
+- **Brand Recognition**: Logo remains visible throughout interaction
+- **Clear Navigation**: Smooth scroll provides seamless user flow
+- **Visual Hierarchy**: Enhanced prominence of primary action
+
+### Files Modified
+- `src/App.tsx` - Added hero CTA, improved header, smooth scroll functionality
+- `changelog.md` - Updated with enhancement details
+
+### Notes
+- Hero CTA reduces friction for immediate user engagement
+- Fixed header ensures consistent brand presence
+- Smooth scroll enhances user experience and accessibility
+- All existing functionality preserved and enhanced
+
+## [1.2.1] - Header Overlap Fix
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Fixed
+- **Header Overlap Issue**
+  - Fixed header overlapping form section when scrolling from hero CTA
+  - Updated scroll behavior to account for fixed header height (88px)
+  - Replaced `scrollIntoView` with `window.scrollTo` for precise positioning
+  - Improved user experience with proper scroll offset calculation
+
+### Technical Details
+- **Scroll Offset**: Added 88px offset to account for header height and padding
+- **Smooth Scrolling**: Maintained smooth scroll behavior with precise positioning
+- **Cross-browser Compatibility**: Used standard `window.scrollTo` API
+
+### Files Modified
+- `src/App.tsx` - Updated scrollToForm function with proper offset calculation
+
+### Notes
+- Form section now displays properly below fixed header
+- Smooth scroll animation preserved with accurate positioning
+- No visual overlap between header and form content
+
+## [1.3.0] - Header Removal and Logo Integration
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Removed
+- **Fixed Header**
+  - Removed fixed header bar that was overlaying content
+  - Eliminated potential visual clutter and navigation complexity
+  - Simplified page structure for cleaner user experience
+
+### Changed
+- **Logo Placement**
+  - Moved Arami logo from fixed header to top of hero section
+  - Logo now scrolls naturally with page content
+  - Centered logo positioning with proper spacing (py-8 px-4)
+  - Maintained logo size (h-16) and drop shadow effects
+
+- **Hero Section Layout**
+  - Changed from `flex items-center justify-center` to `flex flex-col justify-center`
+  - Added dedicated logo container at top of hero section
+  - Removed `pt-32` padding that was compensating for fixed header
+  - Improved vertical flow from logo to headline to content
+
+- **Scroll Behavior**
+  - Simplified scroll function by removing header height offset
+  - Cleaner scroll-to-form functionality without header overlap concerns
+  - Maintained smooth scrolling behavior
+
+- **Form Section**
+  - Removed `pt-24` padding that was compensating for fixed header
+  - Form now displays naturally without header spacing considerations
+
+### User Experience Improvements
+- **Cleaner Design**: Eliminated visual complexity of fixed header
+- **Natural Flow**: Logo and content scroll together for cohesive experience
+- **Simplified Navigation**: Removed potential confusion from overlapping elements
+- **Mobile Optimization**: Better mobile experience without fixed header space constraints
+
+### Technical Details
+- **Layout Structure**: Simplified CSS layout without fixed positioning
+- **Scroll Mechanics**: Streamlined scroll behavior without offset calculations
+- **Responsive Design**: Maintained responsive logo and layout across all breakpoints
+
+### Files Modified
+- `src/App.tsx` - Removed header, integrated logo into hero, simplified scroll function
+- `changelog.md` - Updated with removal and integration details
+
+### Notes
+- Logo maintains strong brand presence at top of page
+- Cleaner, more focused user experience
+- Simplified codebase without fixed header complexity
+- All existing functionality preserved
+
+## [1.3.1] - Price Badge Positioning Enhancement
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Changed
+- **Premium Tier Price Display**
+  - Moved price badge from separate section to inline with Premium option
+  - Positioned price badge to the right side of "Full Avatar (Premium)" label
+  - Updated price from "$5 /mo" to "Aprox ≈ $25 /mo" for accuracy
+  - Improved visual hierarchy and user experience
+
+- **Form Layout Optimization**
+  - Enhanced radio button layout with flexbox for better alignment
+  - Price badge now appears contextually with premium option
+  - Maintained responsive design across all breakpoints
+  - Preserved pricing disclaimer below tier selection
+
+### User Experience Improvements
+- **Contextual Pricing**: Price information appears directly with relevant option
+- **Cleaner Layout**: Eliminated separate price badge section for streamlined design
+- **Better Information Architecture**: Price and tier selection now logically grouped
+- **Improved Readability**: Clear visual association between premium tier and pricing
+
+### Technical Details
+- **Flexbox Layout**: Used `flex-1` and `ml-3` for optimal spacing and alignment
+- **Responsive Design**: Price badge scales appropriately across all device sizes
+- **Consistent Styling**: Maintained gradient background and pill shape design
+- **Accessibility**: Preserved semantic structure and screen reader compatibility
+
+### Files Modified
+- `src/App.tsx` - Updated premium tier radio button layout with inline price badge
+- `changelog.md` - Added entry for price badge positioning enhancement
+
+### Notes
+- Price information now appears more naturally in user flow
+- Enhanced visual clarity without compromising functionality
+- Maintained all existing form validation and submission logic
+- Improved overall form aesthetics and usability
