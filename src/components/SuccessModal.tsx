@@ -14,9 +14,9 @@ export const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, ema
   
   const tweetText = `Ever wish your thoughts had a patient listener? 
 
-I just grabbed spot # ${userId} on the @aramiapp waitlist. An AI avatar that turns 3-min voice notes into clarity.🧘✨
+I just grabbed spot # ${userId} on the @aramiapp waitlist. An AI avatar that turns 3-min voice notes into clarity.🧘✨ Limited seats left.
 
-Limited seats left → https://talkwitharami.xyz/?ref=${refCode}
+Use my ref code: https://talkwitharami.xyz/?ref=${refCode}
 
 #SelfDiscovery
 
