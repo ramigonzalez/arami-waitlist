@@ -1,16 +1,26 @@
 import React, { useState } from 'react'
 import { supabase, type WaitlistSubscriber } from './lib/supabase'
 import { SuccessModal } from './components/SuccessModal'
-import { Mail, Shield, Mic, Bot } from 'lucide-react'
+import { Mail, Shield, Mic, Bot, Users } from 'lucide-react'
 
 function App() {
   const [email, setEmail] = useState('')
   const [userId, setUserId] = useState(0)
   const [refCode, setRefCode] = useState('')
+  const [incomingRefCode, setIncomingRefCode] = useState<string | null>(null)
   const [tier, setTier] = useState('free')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const [showSuccess, setShowSuccess] = useState(false)
+
+  // Check for referral code on component mount
+  React.useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search)
+    const refParam = searchParams.get('ref')
+    if (refParam) {
+      setIncomingRefCode(refParam)
+    }
+  }, [])
 
   // Analytics helper
   const trackEvent = (event: string, data?: any) => {
@@ -227,6 +237,25 @@ function App() {
       <section id="waitlist-form" className="form pb-16 px-4 scroll-mt-20">
         <div className="max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="bg-bg-02/80 backdrop-blur-sm border border-accent-lilac/20 rounded-md p-8 shadow-2xl">
+            {/* Referral Code Display */}
+            {incomingRefCode && (
+              <div className="mb-6 p-4 bg-accent-moss/10 border border-accent-moss/30 rounded-md">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-accent-moss/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="w-4 h-4 text-accent-moss" />
+                  </div>
+                  <div>
+                    <p className="text-accent-moss font-medium text-sm">
+                      You were referred by: <span className="font-bold">{incomingRefCode}</span>
+                    </p>
+                    <p className="text-text-muted text-xs mt-1">
+                      You'll both get priority access when you join!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="mt-4 mb-4">
               <label htmlFor="email" className="block text-text-primary font-medium mb-2">
                 Email Address
