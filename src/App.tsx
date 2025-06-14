@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { supabase, type WaitlistSubscriber } from './lib/supabase'
 import { SuccessModal } from './components/SuccessModal'
-import { Mail, Shield, Users } from 'lucide-react'
+import { Mail, Shield, Mic, Bot } from 'lucide-react'
 
 function App() {
   const [email, setEmail] = useState('')
@@ -117,28 +117,28 @@ function App() {
           <div className="grid md:grid-cols-3 gap-6 mt-16 mb-16 max-w-3xl mx-auto">
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
               <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Users className="w-6 h-6 text-accent-lilac" />
+                <Shield className="w-6 h-6 text-accent-lilac" />
               </div>
               <p className="text-text-primary font-medium">
-                AI reflections tuned to your DISC & Enneagram
-              </p>
-            </div>
-            
-            <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-moss/10 rounded-md p-6">
-              <div className="w-12 h-12 bg-accent-moss/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <div className="w-6 h-6 bg-accent-moss rounded-full"></div>
-              </div>
-              <p className="text-text-primary font-medium">
-                Symbolic virtue rewards instead of dopamine hits
+                Private, encrypted, yours to delete anytime
               </p>
             </div>
             
             <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
               <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Shield className="w-6 h-6 text-accent-lilac" />
+                <Mic className="w-6 h-6 text-accent-lilac" />
               </div>
               <p className="text-text-primary font-medium">
-                Private, encrypted, yours to delete anytime
+                Speak your mind, not type
+              </p>
+            </div>
+            
+            <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-moss/10 rounded-md p-6">
+              <div className="w-12 h-12 bg-accent-moss/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <Bot className="w-6 h-6 text-accent-moss" />
+              </div>
+              <p className="text-text-primary font-medium">
+                Lifelike AI avatar for emotional connection
               </p>
             </div>
           </div>
