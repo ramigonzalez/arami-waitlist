@@ -1,5 +1,5 @@
 import React from 'react'
-import { X, Twitter } from 'lucide-react'
+import { X, Twitter, Copy, Check } from 'lucide-react'
 
 interface SuccessModalProps {
   isOpen: boolean
@@ -7,16 +7,51 @@ interface SuccessModalProps {
   email: string
   userId: number
   refCode: string
+  earlyBird: boolean
+  position: number | null
 }
 
-export const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, email, userId, refCode }) => {
+export const SuccessModal: React.FC<SuccessModalProps> = ({ 
+  isOpen, 
+  onClose, 
+  email, 
+  userId, 
+  refCode, 
+  earlyBird, 
+  position 
+}) => {
+  const [copied, setCopied] = useState(false)
+  
   if (!isOpen) return null
   
+  const referralLink = `https://talkwitharami.xyz/?ref=${refCode}`
+  
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(referralLink)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy:', err)
+    }
+  }
+  
+  // Dynamic status message
+  const getStatusMessage = () => {
+    if (earlyBird) {
+      return "You're an early bird! 🐦"
+    } else if (position) {
+      return `You're #${position} on the waitlist!`
+    }
+    return "Welcome to the waitlist!"
+  }
+  
+  // Dynamic tweet text
   const tweetText = `Ever wish your thoughts had a patient listener? 
 
-I just grabbed spot # ${userId} on the @aramiapp waitlist. An AI avatar that turns 3-min voice notes into clarity.🧘✨ Limited seats left.
+I just ${earlyBird ? 'secured early bird access' : position ? `grabbed spot #${position}` : 'joined'} on the @aramiapp waitlist. An AI avatar that turns 3-min voice notes into clarity.🧘✨
 
-Use my ref code: https://talkwitharami.xyz/?ref=${refCode}
+${earlyBird ? 'Early bird seats filling fast!' : 'Limited seats left!'} Use my ref code: ${referralLink}
 
 #SelfDiscovery
 
@@ -45,9 +80,45 @@ Built-in @boltdotnew`;
             You're in!
           </h2>
           
+          <div className="mb-4">
+            <p className="text-lg font-medium text-accent-moss">
+              {getStatusMessage()}
+            </p>
+          </div>
+          
           <p className="text-text-muted mb-6">
             Welcome to the waitlist! We'll notify you at <span className="text-accent-moss">{email}</span> when we're ready for you.
           </p>
+          
+          {/* Referral Section - Show if position > 250 or always for engagement */}
+          {(position && position > 250) || !earlyBird ? (
+            <div className="bg-bg-01/50 rounded-md p-4 mb-6 border border-accent-lilac/20">
+              <h3 className="text-text-primary font-semibold mb-2">
+                {position && position > 250 ? "Share your link to move up:" : "Share your link to help friends join:"}
+              </h3>
+              <div className="bg-bg-01 rounded-pill p-3 mb-3 border border-accent-lilac/30">
+                <code className="text-accent-lilac text-sm break-all">
+                  {referralLink}
+                </code>
+              </div>
+              <button
+                onClick={copyToClipboard}
+                className="w-full bg-accent-moss text-white py-2 px-4 rounded-pill font-medium hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+              >
+                {copied ? (
+                  <>
+                    <Check size={16} />
+                    Copied!
+                  </>
+                ) : (
+                  <>
+                    <Copy size={16} />
+                    Copy Link
+                  </>
+                )}
+              </button>
+            </div>
+          ) : null}
           
           <div className="flex flex-col sm:flex-row gap-3">
             <button

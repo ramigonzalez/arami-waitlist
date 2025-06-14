@@ -7,6 +7,8 @@ function App() {
   const [email, setEmail] = useState('')
   const [userId, setUserId] = useState(0)
   const [refCode, setRefCode] = useState('')
+  const [earlyBird, setEarlyBird] = useState(false)
+  const [position, setPosition] = useState<number | null>(null)
   const [incomingRefCode, setIncomingRefCode] = useState<string | null>(null)
   const [manualRefCode, setManualRefCode] = useState('')
   const [tier, setTier] = useState('free')
@@ -61,6 +63,8 @@ function App() {
 
       setUserId(data.id)
       setRefCode(data.ref_code)
+      setEarlyBird(data.early_bird)
+      setPosition(data.position)
 
       // Track successful submission
       trackEvent('join_waitlist', { 
@@ -383,6 +387,8 @@ function App() {
         email={email}
         userId={userId}
         refCode={refCode}
+        earlyBird={earlyBird}
+        position={position}
       />
     </div>
   )
