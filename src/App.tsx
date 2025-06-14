@@ -83,7 +83,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
       {/* Hero Section */}
       <section className="hero flex flex-col justify-center px-4 py-6">        
-        <div className="max-w-4xl mx-auto text-center">          
+        <div className="max-w-5xl mx-auto text-center">          
           {/* Arami Logo */}
           <img 
             src="/arami-logo.png" 
