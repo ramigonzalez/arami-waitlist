@@ -283,3 +283,41 @@
 - Enhanced visual clarity without compromising functionality
 - Maintained all existing form validation and submission logic
 - Improved overall form aesthetics and usability
+
+## [1.3.2] - Conditional Position Display Logic
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Added
+- **Conditional Position Logic in Supabase Function**
+  - Modified `waitlist-signup` edge function to conditionally return position
+  - Position only returned when early bird seats are full AND subscriber is not an early bird
+  - Added early bird cap checking from `waitlist_meta` table
+  - Integrated with `v_waitlist_rank` view for accurate position calculation
+
+### Changed
+- **Enhanced Response Data**
+  - Function now returns `position` field in response when applicable
+  - Position is `null` for early birds or when early bird seats are still available
+  - Added position tracking to analytics logging
+
+### Technical Details
+- **Early Bird Cap Check**: Queries `waitlist_meta.early_bird_cap` (defaults to 250)
+- **Early Bird Count**: Counts current early bird subscribers
+- **Position Calculation**: Uses `v_waitlist_rank` view for accurate ranking
+- **Conditional Logic**: Only calculates position when `!early_bird && earlyBirdCount >= cap`
+
+### User Experience
+- **Smart Position Display**: Position only shown when relevant (after early bird seats fill)
+- **Performance Optimized**: Avoids unnecessary ranking queries for early birds
+- **Accurate Ranking**: Uses existing view infrastructure for consistent position calculation
+
+### Files Modified
+- `supabase/functions/waitlist-signup/index.ts` - Added conditional position logic
+- `changelog.md` - Updated with implementation details
+
+### Notes
+- Position calculation leverages existing `v_waitlist_rank` view
+- Early bird cap configurable via `waitlist_meta` table
+- Function maintains backward compatibility with existing frontend
+- Ready for frontend integration to display position when applicable

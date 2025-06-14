@@ -86,20 +86,54 @@ serve(async (req) => {
       throw insertError
     }
 
-    // 2. Send welcome email (you can implement this later)
+    // 2. Check if we need to return position (only if early bird seats are full and user is not early bird)
+    let position = null
+    
+    if (!subscriber.early_bird) {
+      // Get early bird cap from meta table
+      const { data: metaData } = await supabaseClient
+        .from('waitlist_meta')
+        .select('early_bird_cap')
+        .single()
+      
+      const earlyBirdCap = metaData?.early_bird_cap || 250
+      
+      // Count current early birds
+      const { count: earlyBirdCount } = await supabaseClient
+        .from('waitlist_subscribers')
+        .select('*', { count: 'exact', head: true })
+        .eq('early_bird', true)
+      
+      // If early bird seats are full, get position from ranking view
+      if (earlyBirdCount && earlyBirdCount >= earlyBirdCap) {
+        const { data: rankData } = await supabaseClient
+          .from('v_waitlist_rank')
+          .select('position')
+          .eq('id', subscriber.id)
+          .single()
+        
+        position = rankData?.position || null
+      }
+    }
+
+    // 3. Send welcome email (you can implement this later)
     // await sendWelcomeEmail(subscriber)
 
-    // 3. Track analytics
+    // 4. Track analytics
     console.log('New subscriber:', {
       id: subscriber.id,
       email: subscriber.email,
       tier: subscriber.tier,
       ref_code: subscriber.ref_code,
       early_bird: subscriber.early_bird,
+      position: position,
     })
 
     return new Response(
-      JSON.stringify(subscriber),
+      JSON.stringify({
+        ...subscriber,
+        position
+      }),
       { 
         headers: { 
           ...corsHeaders,
