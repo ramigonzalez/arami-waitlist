@@ -33,7 +33,11 @@ serve(async (req) => {
   }
 
   try {
-    const { email, tier, ref_by } = await req.json()
+    const requestBody = await req.json(); 
+    console.log('Request Body:', requestBody); // Log the request body
+
+    // Parse the request body
+    const { email, tier, ref_by } = requestBody
 
     // Validate email format
     if (!EMAIL_REGEX.test(email)) {
