@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 .env
 .vscode/extensions.json
+supabase/config.toml
+supabase/config.toml.backup
+supabase/.branches/_current_branch
+supabase/.temp/cli-latest
+supabase/config.toml
