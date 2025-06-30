@@ -61,7 +61,7 @@ Built-in @boltdotnew`;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-bg-02 rounded-md max-w-md w-full p-6 relative border border-accent-lilac/20">
+      <div className="bg-bg-02 rounded-md max-w-md w-full p-6 relative border border-primary-base/20">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-text-muted hover:text-text-primary transition-colors"
@@ -81,29 +81,29 @@ Built-in @boltdotnew`;
           </h2>
           
           <div className="mb-4">
-            <p className="text-lg font-medium text-accent-moss">
+            <p className="text-lg font-medium text-accent-300">
               {getStatusMessage()}
             </p>
           </div>
           
           <p className="text-text-muted mb-6">
-            Welcome to the waitlist! We'll notify you at <span className="text-accent-moss">{email}</span> when we're ready for you.
+            Welcome to the waitlist! We'll notify you at <span className="text-accent-300">{email}</span> when we're ready for you.
           </p>
           
           {/* Referral Section - Show if position > 250 or always for engagement */}
           {(position && position > 250) || !earlyBird ? (
-            <div className="bg-bg-01/50 rounded-md p-4 mb-6 border border-accent-lilac/20">
+            <div className="bg-bg-01/50 rounded-md p-4 mb-6 border border-primary-base/20">
               <h3 className="text-text-primary font-semibold mb-2">
                 {position && position > 250 ? "Share your link to move up:" : "Share your link to help friends join:"}
               </h3>
-              <div className="bg-bg-01 rounded-pill p-3 mb-3 border border-accent-lilac/30">
-                <code className="text-accent-lilac text-sm break-all">
+              <div className="bg-bg-01 rounded-pill p-3 mb-3 border border-primary-base/30">
+                <code className="text-primary-base text-sm break-all">
                   {referralLink}
                 </code>
               </div>
               <button
                 onClick={copyToClipboard}
-                className="w-full bg-accent-moss text-white py-2 px-4 rounded-pill font-medium hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-accent-300 text-white py-2 px-4 rounded-pill font-medium hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
               >
                 {copied ? (
                   <>
@@ -131,7 +131,7 @@ Built-in @boltdotnew`;
               href={tweetUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-accent-lilac text-white px-4 py-2 rounded-pill font-medium hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-primary-base text-white px-4 py-2 rounded-pill font-medium hover:bg-primary-hover transition-colors flex items-center justify-center gap-2"
             >
               <Twitter size={16} />
               Share

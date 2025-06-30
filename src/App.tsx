@@ -95,7 +95,46 @@ function App() {
     }
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bg-01 to-bg-02 font-body">
+    <div className="min-h-screen app-background font-body">
+      {/* Bolt.new Badge */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .bolt-badge {
+            transition: all 0.3s ease;
+          }
+          @keyframes badgeIntro {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+          }
+          .bolt-badge-intro {
+            animation: badgeIntro 0.5s ease-out 1s both;
+          }
+          .bolt-badge-intro.animated {
+            animation: none;
+          }
+          @keyframes badgeHover {
+            0% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(22deg); filter: drop-shadow(0 8px 16px rgba(101, 86, 185, 0.4)); }
+            100% { transform: scale(1) rotate(0deg); }
+          }
+          .bolt-badge:hover {
+            animation: badgeHover 0.6s ease-in-out;
+          }
+          .bolt-badge img {
+            box-shadow: 0 4px 20px rgba(101, 86, 185, 0.3);
+          }
+        `
+      }} />
+      <div className="fixed top-4 right-4 z-50">
+        <a href="https://bolt.new/?rid=os72mi" target="_blank" rel="noopener noreferrer" 
+           className="block transition-all duration-300 hover:shadow-2xl">
+          <img src="https://storage.bolt.army/white_circle_360x360.png" 
+               alt="Built with Bolt.new badge" 
+               className="w-20 h-20 md:w-28 md:h-28 rounded-full shadow-lg bolt-badge bolt-badge-intro"
+               onAnimationEnd={(e) => e.currentTarget.classList.add('animated')} />
+        </a>
+      </div>
+
       {/* Hero Section */}
       <section className="hero flex flex-col justify-center px-4 py-6">        
         <div className="max-w-5xl mx-auto text-center">          
@@ -121,7 +160,7 @@ function App() {
           <div className="mt-20 mb-20">
             <button
               onClick={scrollToForm}
-              className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-600 shadow-2xl hover:shadow-accent-lilac/25"
+              className="btn-primary bg-gradient-pulse text-white py-4 px-8 rounded-pill font-display font-bold text-lg hover:animate-pulse-btn transition-all duration-600 shadow-2xl hover:shadow-primary-base/25"
             >
               Join the Waitlist
             </button>
@@ -130,27 +169,27 @@ function App() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mt-16 mb-16 max-w-3xl mx-auto">
-            <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
-              <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Shield className="w-6 h-6 text-accent-lilac" />
+            <div className="bg-bg-02/50 backdrop-blur-sm border border-primary-base/10 rounded-md p-6">
+              <div className="w-12 h-12 bg-primary-base/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <Shield className="w-6 h-6 text-primary-base" />
               </div>
               <p className="text-text-primary font-medium">
                 Private, encrypted, yours to delete anytime
               </p>
             </div>
             
-            <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-lilac/10 rounded-md p-6">
-              <div className="w-12 h-12 bg-accent-lilac/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Mic className="w-6 h-6 text-accent-lilac" />
+            <div className="bg-bg-02/50 backdrop-blur-sm border border-primary-base/10 rounded-md p-6">
+              <div className="w-12 h-12 bg-primary-base/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <Mic className="w-6 h-6 text-primary-base" />
               </div>
               <p className="text-text-primary font-medium">
                 Speak your mind, not type
               </p>
             </div>
             
-            <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-moss/10 rounded-md p-6">
-              <div className="w-12 h-12 bg-accent-moss/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Bot className="w-6 h-6 text-accent-moss" />
+            <div className="bg-bg-02/50 backdrop-blur-sm border border-accent-300/10 rounded-md p-6">
+              <div className="w-12 h-12 bg-accent-300/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <Bot className="w-6 h-6 text-accent-300" />
               </div>
               <p className="text-text-primary font-medium">
                 Lifelike AI avatar for emotional connection
@@ -181,7 +220,7 @@ function App() {
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-accent-lilac rounded-full mt-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-primary-base rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="text-text-primary font-semibold mb-1">Natural Voice Conversations</h3>
                     <p className="text-text-muted text-sm">Speak naturally with Imara using advanced voice recognition and synthesis</p>
@@ -189,7 +228,7 @@ function App() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-accent-moss rounded-full mt-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-accent-300 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="text-text-primary font-semibold mb-1">Personalized AI Avatar</h3>
                     <p className="text-text-muted text-sm">See and interact with your AI companion through lifelike expressions and gestures</p>
@@ -197,7 +236,7 @@ function App() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-accent-lilac rounded-full mt-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-primary-base rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="text-text-primary font-semibold mb-1">Emotional Intelligence</h3>
                     <p className="text-text-muted text-sm">AI that understands context, tone, and emotional nuance in your conversations</p>
@@ -205,7 +244,7 @@ function App() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-accent-moss rounded-full mt-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-accent-300 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="text-text-primary font-semibold mb-1">Complete Privacy</h3>
                     <p className="text-text-muted text-sm">Your conversations are encrypted and stored securely - delete anytime</p>
@@ -216,7 +255,7 @@ function App() {
               <div className="pt-4">
                 <button
                   onClick={scrollToForm}
-                  className="bg-gradient-pulse text-white py-3 px-6 rounded-pill font-display font-semibold hover:animate-pulse-btn transition-all duration-600 shadow-lg hover:shadow-accent-lilac/25"
+                  className="bg-gradient-pulse text-white py-3 px-6 rounded-pill font-display font-semibold hover:animate-pulse-btn transition-all duration-600 shadow-lg hover:shadow-primary-base/25"
                 >
                   Join the Waitlist
                 </button>
@@ -229,7 +268,7 @@ function App() {
                 <img 
                   src="/arami-app-1.png" 
                   alt="Arami App Interface - Chat with Imara" 
-                  className="w-full h-auto rounded-2xl shadow-2xl border border-accent-lilac/20"
+                  className="w-full h-auto rounded-2xl shadow-2xl border border-primary-base/20"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-bg-01/20 to-transparent rounded-2xl pointer-events-none"></div>
               </div>
@@ -241,16 +280,16 @@ function App() {
       {/* Form Section */}
       <section id="waitlist-form" className="form pb-16 px-4 scroll-mt-20">
         <div className="max-w-md mx-auto">
-          <form onSubmit={handleSubmit} className="bg-bg-02/80 backdrop-blur-sm border border-accent-lilac/20 rounded-md p-8 shadow-2xl">
+          <form onSubmit={handleSubmit} className="bg-bg-02/80 backdrop-blur-sm border border-primary-base/20 rounded-md p-8 shadow-2xl">
             {/* Referral Code Display */}
             {incomingRefCode && (
-              <div className="mb-6 p-4 bg-accent-moss/10 border border-accent-moss/30 rounded-md">
+              <div className="mb-6 p-4 bg-accent-300/10 border border-accent-300/30 rounded-md">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-accent-moss/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="w-4 h-4 text-accent-moss" />
+                  <div className="w-8 h-8 bg-accent-300/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="w-4 h-4 text-accent-300" />
                   </div>
                   <div>
-                    <p className="text-accent-moss font-medium text-sm">
+                    <p className="text-accent-300 font-medium text-sm">
                       You were referred by: <span className="font-bold">{incomingRefCode}</span>
                     </p>
                     <p className="text-text-muted text-xs mt-1">
@@ -273,7 +312,7 @@ function App() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-bg-01 border border-accent-lilac/30 rounded-pill text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-lilac focus:ring-2 focus:ring-accent-lilac/20 transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-bg-01 border border-primary-base/30 rounded-pill text-text-primary placeholder-text-muted focus:outline-none focus:border-primary-base focus:ring-2 focus:ring-primary-base/20 transition-colors"
                   placeholder="your@email.com"
                 />
               </div>
@@ -292,7 +331,7 @@ function App() {
                     id="refCode"
                     value={manualRefCode}
                     onChange={(e) => setManualRefCode(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-bg-01 border border-accent-lilac/30 rounded-pill text-text-primary placeholder-text-muted focus:outline-none focus:border-accent-lilac focus:ring-2 focus:ring-accent-lilac/20 transition-colors"
+                    className="w-full pl-10 pr-4 py-3 bg-bg-01 border border-primary-base/30 rounded-pill text-text-primary placeholder-text-muted focus:outline-none focus:border-primary-base focus:ring-2 focus:ring-primary-base/20 transition-colors"
                     placeholder="Enter a friend's referral code"
                   />
                 </div>
@@ -304,33 +343,33 @@ function App() {
                 Choose Your Experience
               </label>
               <div className="space-y-3">
-                <label className="flex items-center p-3 bg-bg-01/50 rounded-md border border-transparent hover:border-accent-lilac/30 cursor-pointer transition-colors">
+                <label className="flex items-center p-3 bg-bg-01/50 rounded-md border border-transparent hover:border-primary-base/30 cursor-pointer transition-colors">
                   <input
                     type="radio"
                     name="tier"
                     value="free"
                     checked={tier === 'free'}
                     onChange={(e) => handleTierChange(e.target.value)}
-                    className="text-accent-lilac focus:ring-accent-lilac/20"
+                    className="text-primary-base focus:ring-primary-base/20"
                   />
                   <span className="ml-3 text-text-primary">
                     <span className="font-medium">Voice-Only</span>
-                    <span className="text-accent-moss ml-2">(Free)</span>
+                    <span className="text-accent-300 ml-2">(Free)</span>
                   </span>
                 </label>
                 
-                <label className="flex items-center p-3 bg-bg-01/50 rounded-md border border-transparent hover:border-accent-lilac/30 cursor-pointer transition-colors">
+                <label className="flex items-center p-3 bg-bg-01/50 rounded-md border border-transparent hover:border-primary-base/30 cursor-pointer transition-colors">
                   <input
                     type="radio"
                     name="tier"
                     value="premium"
                     checked={tier === 'premium'}
                     onChange={(e) => handleTierChange(e.target.value)}
-                    className="text-accent-lilac focus:ring-accent-lilac/20"
+                    className="text-primary-base focus:ring-primary-base/20"
                   />
                   <span className="ml-3 text-text-primary flex-1">
                     <span className="font-medium">Full Avatar</span>
-                    <span className="text-accent-lilac ml-2">(Premium)</span>
+                    <span className="text-primary-base ml-2">(Premium)</span>
                   </span>
                   <div className="ml-3 bg-gradient-pulse text-white px-3 py-1 rounded-pill text-xs font-medium">
                     Aprox ≈ $25 /mo
@@ -366,15 +405,15 @@ function App() {
       {/* Social Proof Section */}
       <section className="social-proof py-4 px-4 text-center">
         <p className="text-text-muted">
-          Trusted by <span className="text-accent-moss font-semibold">2k creatives</span> during private beta.
+          Trusted by <span className="text-accent-300 font-semibold">2k creatives</span> during private beta.
         </p>
       </section>
 
       {/* Footer Section */}
-      <section className="footer py-8 px-4 text-center border-t border-accent-lilac/10">
+      <section className="footer py-8 px-4 text-center border-t border-primary-base/10">
         <p className="text-text-muted text-sm">
           HIPAA-grade encryption. Opt-out anytime. 
-          <a href="/privacy" className="text-accent-lilac hover:text-accent-lilac/80 ml-1 transition-colors">
+          <a href="/privacy" className="text-primary-base hover:text-primary-hover ml-1 transition-colors">
             Privacy Policy
           </a>
         </p>

@@ -1,0 +1,43 @@
+# ==== BOLT-ASSISTANT AUTO-GENERATED START ====
+# WARNING: This section is managed automatically by Bolt Assistant – any manual edits here will be overwritten.
+.bolt/config.json
+.bolt/ignore
+.bolt/prompt
+.env
+.env.example
+.gitignore
+README.md
+changelog.md
+docs/prompt.initial.md
+eslint.config.js
+index.html
+memory.md
+package-lock.json
+package.json
+postcss.config.js
+project-phases.md
+public/arami-app-1.png
+public/arami-logo.png
+# src/App.tsx
+# src/components/SuccessModal.tsx
+src/index.css
+src/lib/supabase.ts
+src/main.tsx
+src/vite-env.d.ts
+supabase/.branches/_current_branch
+supabase/.gitignore
+supabase/.temp/cli-latest
+supabase/config.toml
+supabase/functions/_shared/cors.ts
+supabase/functions/hello-world/index.ts
+supabase/functions/waitlist-signup/index.ts
+supabase/invite-email-template.html
+supabase/migrations/20250612235804_tender_smoke.sql
+supabase/migrations/20250613182648_gentle_tower.sql
+supabase/migrations/20250613190426_wispy_trail.sql
+# tailwind.config.js
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+# ==== BOLT-ASSISTANT AUTO-GENERATED END ====

@@ -384,3 +384,77 @@
 - Copy-to-clipboard provides seamless sharing experience across devices
 - Dynamic tweet content maintains authenticity while promoting referral system
 - All existing functionality preserved while adding new engagement features
+
+## [1.4.0] - Arami Design System Rebranding
+**Date**: 2025-01-27
+**Status**: ✅ Completed
+
+### Added
+- **New Design System Implementation**
+  - Complete visual rebrand using sophisticated Arami design system
+  - Radial gradient background with micro-grain overlay for premium feel
+  - Enhanced Bolt.new badge with brand-consistent shadow effects
+  - Custom CSS for complex background gradients and visual effects
+
+- **Advanced Color Palette**
+  - Deep space backgrounds: `#0E062A` (surface-900), `#130C3C` (surface-800)
+  - Primary purple: `#6556B9` (primary-base) with hover state `#846FDA` (primary-hover)
+  - Accent lilac: `#BA9BE6` (accent-300) for secondary elements
+  - Neutral text: `#F5EFE8` for optimal contrast on dark backgrounds
+
+### Changed
+- **Typography System**
+  - Updated from DM Sans to Inter font family for consistency
+  - Unified display and body text to use Inter across all components
+  - Maintained font weights and sizing hierarchy
+
+- **Component Styling Overhaul**
+  - Updated all color references to new design tokens
+  - Refined button animations: scale 1.0 → 1.04 with proper shadow effects
+  - Enhanced border radius from 28px to 24px for modern pill shapes
+  - Improved visual hierarchy with consistent spacing and contrast
+
+- **Background and Visual Effects**
+  - Replaced simple gradient with sophisticated radial gradient
+  - Added micro-grain overlay (3% white opacity with overlay blend mode)
+  - Enhanced shadow effects with subtle indigo glows
+  - Updated all component backgrounds to use new surface colors
+
+- **Interactive Elements**
+  - Refined hover states with new primary colors
+  - Updated focus states for better accessibility
+  - Enhanced button pulse animation with brand-consistent colors
+  - Improved visual feedback across all interactive components
+
+### Technical Details
+- **Tailwind Configuration**: Complete overhaul of color tokens and design system
+- **Custom CSS**: Added app-background class for complex gradient and grain effects
+- **Component Updates**: Systematic update of all color references across components
+- **Animation Refinements**: Updated keyframes to use new color palette
+
+### User Experience Improvements
+- **Premium Aesthetics**: Sophisticated visual design worthy of production
+- **Brand Consistency**: Cohesive visual identity across all components
+- **Enhanced Accessibility**: Improved contrast ratios and visual hierarchy
+- **Modern Polish**: Contemporary design patterns and micro-interactions
+
+### Files Modified
+- `tailwind.config.js` - Complete design system overhaul with new tokens
+- `src/index.css` - Added custom background gradient and grain overlay
+- `src/App.tsx` - Updated all component styling with new color palette
+- `src/components/SuccessModal.tsx` - Applied new design system to modal
+- `memory.md` - Updated current state and technical documentation
+- `changelog.md` - Added comprehensive rebranding details
+
+### Design Philosophy
+- **Sophisticated Minimalism**: Clean, modern aesthetic with attention to detail
+- **Brand Alignment**: Visual identity that reflects Arami's premium positioning
+- **User-Centric Design**: Enhanced usability through improved visual hierarchy
+- **Production Ready**: Professional-grade design suitable for launch
+
+### Notes
+- All existing functionality preserved during visual transformation
+- Responsive design maintained across all device sizes
+- Performance optimized with efficient CSS and minimal overhead
+- Ready for production deployment with sophisticated brand identity
+- Enhanced visual appeal while maintaining accessibility standards

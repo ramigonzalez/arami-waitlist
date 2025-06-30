@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.app-background {
+  background-image: 
+    linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 100%),
+    radial-gradient(circle at 50% 45%, #23143e 0%, #1c1433 40%, #130c3c 70%, #0e062a 100%);
+  background-blend-mode: overlay, normal;
+}
